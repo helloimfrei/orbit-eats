@@ -1,0 +1,24 @@
+{
+  "name": "orbit-eats",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helloimfrei/orbit-eats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helloimfrei/orbit-eats/issues"
+  },
+  "homepage": "https://github.com/helloimfrei/orbit-eats#readme",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
