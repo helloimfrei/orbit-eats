@@ -1,4 +1,4 @@
-/* ── Hero ── */
+/* hero */
 .hero {
   position: relative;
   display: flex;
@@ -82,7 +82,7 @@
   background: #00d9a3;
 }
 
-/* ── Features ── */
+/* features */
 .features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -111,7 +111,7 @@
   color: var(--text-secondary);
 }
 
-/* ── Featured Restaurants ── */
+/* featured restaurants */
 .featured {
   padding: 2.5rem 2rem;
 }
@@ -145,7 +145,7 @@
   gap: 1.25rem;
 }
 
-/* ── Restaurant Card ── */
+/* restaurant card */
 .restaurant-card {
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -185,7 +185,7 @@
   color: var(--purple);
 }
 
-/* ── Promo Banner ── */
+/* promo banner */
 .promo {
   display: flex;
   align-items: center;
@@ -224,7 +224,7 @@
   background: #00d9a3;
 }
 
-/* ── Responsive: Tablet (768px) ── */
+/* responsive: tablet (768px) */
 @media (max-width: 768px) {
   .hero {
     min-height: 300px;
@@ -254,7 +254,7 @@
   }
 }
 
-/* ── Responsive: Mobile (480px) ── */
+/* responsive: mobile (480px) */
 @media (max-width: 480px) {
   .hero-headline {
     font-size: 1.4rem;
