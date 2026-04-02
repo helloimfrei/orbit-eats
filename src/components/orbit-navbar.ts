@@ -104,7 +104,9 @@ template.innerHTML = `
   <button class="toggle" aria-label="Toggle menu">&#9776;</button>
   <div class="links">
     <a class="link-restaurants" href="">Restaurants</a>
-    <a href="#">About</a>
+    <a class="link-review-order" href="">Review Order</a>
+    <a class="link-checkout" href="">Checkout</a>
+    <a class="link-game" href="">Game</a>
   </div>
   <a href="#" class="auth-btn">Sign Up / Log In</a>
 </nav>
@@ -123,9 +125,15 @@ export class OrbitNavbar extends HTMLElement {
     const toggle = this.shadowRoot!.querySelector(".toggle")!;
     const logo = this.shadowRoot!.querySelector(".logo") as HTMLAnchorElement;
     const restaurantsLink = this.shadowRoot!.querySelector(".link-restaurants") as HTMLAnchorElement;
+    const reviewOrderLink = this.shadowRoot!.querySelector(".link-review-order") as HTMLAnchorElement;
+    const checkoutLink = this.shadowRoot!.querySelector(".link-checkout") as HTMLAnchorElement;
+    const gameLink = this.shadowRoot!.querySelector(".link-game") as HTMLAnchorElement;
 
     logo.href = `${base}index.html`;
     restaurantsLink.href = `${base}pages/restaurants.html`;
+    reviewOrderLink.href = `${base}pages/review-order.html`;
+    checkoutLink.href = `${base}pages/checkout.html`;
+    gameLink.href = `${base}pages/game.html`;
 
     toggle.addEventListener("click", () => {
       nav.classList.toggle("open");
