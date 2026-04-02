@@ -8,19 +8,17 @@
   <link rel="stylesheet" href="../styles/game.css">
 </head>
 <body>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="restaurants.html">All Restaurants</a>
-    <a href="review-order.html">Review Order</a>
-    <a href="checkout.html">Checkout</a>
-    <a href="game.html">Game</a>
-  </nav>
-
+  <orbit-navbar></orbit-navbar>
   <main>
     <h1>Game</h1>
+    <iframe
+      src="../game/index.html"
+      title="Orbit Eats Delivery Traffic"
+      style="width:100%;border:none;display:block;"
+    ></iframe>
   </main>
-
-  <script src="../dist/main.js"></script>
+  <orbit-footer></orbit-footer>
+  <script type="module" src="../dist/main.js"></script>
   <script src="../dist/game.js"></script>
 </body>
 </html>
