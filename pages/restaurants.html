@@ -8,19 +8,136 @@
   <link rel="stylesheet" href="../styles/restaurants.css">
 </head>
 <body>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="restaurants.html">All Restaurants</a>
-    <a href="review-order.html">Review Order</a>
-    <a href="checkout.html">Checkout</a>
-    <a href="game.html">Game</a>
-  </nav>
+
+  <orbit-navbar base="../"></orbit-navbar>
 
   <main>
-    <h1>All Restaurants</h1>
+
+    <section class="browse-header">
+      <h1 class="browse-title">Browse Restaurants</h1>
+      <div class="browse-search">
+        <span class="browse-search-icon">&#9906;</span>
+        <input type="text" class="browse-search-input" placeholder="Search restaurants, cuisines...">
+      </div>
+    </section>
+
+    <section class="filters">
+      <div class="filters-left">
+        <span class="filters-label">Filters:</span>
+        <button class="filter-btn">Solar System <span class="filter-arrow">&#9662;</span></button>
+        <button class="filter-btn">Galaxy <span class="filter-arrow">&#9662;</span></button>
+        <button class="filter-btn">Distance (light-yrs) <span class="filter-arrow">&#9662;</span></button>
+        <button class="filter-btn">Delivery Time <span class="filter-arrow">&#9662;</span></button>
+        <button class="filter-btn">Cuisine Type <span class="filter-arrow">&#9662;</span></button>
+      </div>
+      <button class="sort-btn">Sort: Recommended <span class="filter-arrow">&#9662;</span></button>
+    </section>
+
+    <section class="results-bar">
+      <span class="results-count">Showing 128 restaurants</span>
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="grid" aria-label="Grid view">&#9638;&#9638;</button>
+        <button class="view-btn" data-view="list" aria-label="List view">&#9776;</button>
+      </div>
+    </section>
+
+    <section class="restaurant-grid" id="restaurantGrid">
+
+      <div class="restaurant-card">
+        <img class="restaurant-card-image" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop" alt="Restaurant interior">
+        <div class="restaurant-card-body">
+          <h3 class="restaurant-card-name">Restaurant Name</h3>
+          <p class="restaurant-card-cuisine">Andromeda &middot; Nebula Cuisine</p>
+          <div class="restaurant-card-tags">
+            <span class="restaurant-card-tag">0.4 ly away</span>
+            <span class="restaurant-card-tag">~20 min</span>
+          </div>
+          <a href="#" class="restaurant-card-btn">View Menu</a>
+        </div>
+      </div>
+
+      <div class="restaurant-card">
+        <img class="restaurant-card-image" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop" alt="Restaurant interior">
+        <div class="restaurant-card-body">
+          <h3 class="restaurant-card-name">Restaurant Name</h3>
+          <p class="restaurant-card-cuisine">Milky Way &middot; Fusion</p>
+          <div class="restaurant-card-tags">
+            <span class="restaurant-card-tag">1.2 ly away</span>
+            <span class="restaurant-card-tag">~35 min</span>
+          </div>
+          <a href="#" class="restaurant-card-btn">View Menu</a>
+        </div>
+      </div>
+
+      <div class="restaurant-card">
+        <img class="restaurant-card-image" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop" alt="Restaurant interior">
+        <div class="restaurant-card-body">
+          <h3 class="restaurant-card-name">Restaurant Name</h3>
+          <p class="restaurant-card-cuisine">Triangulum &middot; Street Food</p>
+          <div class="restaurant-card-tags">
+            <span class="restaurant-card-tag">2.0 ly away</span>
+            <span class="restaurant-card-tag">~50 min</span>
+          </div>
+          <a href="#" class="restaurant-card-btn">View Menu</a>
+        </div>
+      </div>
+
+      <div class="restaurant-card">
+        <img class="restaurant-card-image" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop" alt="Restaurant interior">
+        <div class="restaurant-card-body">
+          <h3 class="restaurant-card-name">Restaurant Name</h3>
+          <p class="restaurant-card-cuisine">Sombrero &middot; Gourmet</p>
+          <div class="restaurant-card-tags">
+            <span class="restaurant-card-tag">0.8 ly away</span>
+            <span class="restaurant-card-tag">~28 min</span>
+          </div>
+          <a href="#" class="restaurant-card-btn">View Menu</a>
+        </div>
+      </div>
+
+      <div class="restaurant-card">
+        <img class="restaurant-card-image" src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=400&h=300&fit=crop" alt="Restaurant interior">
+        <div class="restaurant-card-body">
+          <h3 class="restaurant-card-name">Restaurant Name</h3>
+          <p class="restaurant-card-cuisine">Whirlpool &middot; Casual</p>
+          <div class="restaurant-card-tags">
+            <span class="restaurant-card-tag">3.1 ly away</span>
+            <span class="restaurant-card-tag">~60 min</span>
+          </div>
+          <a href="#" class="restaurant-card-btn">View Menu</a>
+        </div>
+      </div>
+
+      <div class="restaurant-card">
+        <img class="restaurant-card-image" src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&h=300&fit=crop" alt="Restaurant interior">
+        <div class="restaurant-card-body">
+          <h3 class="restaurant-card-name">Restaurant Name</h3>
+          <p class="restaurant-card-cuisine">Pinwheel &middot; Budget</p>
+          <div class="restaurant-card-tags">
+            <span class="restaurant-card-tag">0.6 ly away</span>
+            <span class="restaurant-card-tag">~22 min</span>
+          </div>
+          <a href="#" class="restaurant-card-btn">View Menu</a>
+        </div>
+      </div>
+
+    </section>
+
+    <nav class="pagination">
+      <button class="page-btn page-arrow" disabled>&lsaquo;</button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <span class="page-ellipsis">&hellip;</span>
+      <button class="page-btn">12</button>
+      <button class="page-btn page-arrow">&rsaquo;</button>
+    </nav>
+
   </main>
 
-  <script src="../dist/main.js"></script>
+  <orbit-footer></orbit-footer>
+
+  <script type="module" src="../dist/main.js"></script>
   <script src="../dist/restaurants.js"></script>
 </body>
 </html>
