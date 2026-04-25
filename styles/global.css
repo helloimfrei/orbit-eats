@@ -42,3 +42,143 @@ img {
   height: auto;
   display: block;
 }
+
+/* Navbar */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.nav-logo {
+  font-family: 'Exo', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--cyan);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-family: 'Genos', sans-serif;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: var(--cyan);
+}
+
+.nav-auth-btn {
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--purple);
+  border-radius: 4px;
+  color: var(--purple);
+  font-size: 0.95rem;
+  font-family: 'Exo', sans-serif;
+  font-weight: 600;
+}
+
+.nav-auth-btn:hover {
+  background: var(--purple);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links,
+  .nav-auth-btn {
+    display: none;
+  }
+
+  .site-nav.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    order: 3;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+    margin-top: 0.75rem;
+  }
+
+  .site-nav.open .nav-auth-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    order: 4;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Footer */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-brand {
+  font-family: 'Exo', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--cyan);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-family: 'Genos', sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--cyan);
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

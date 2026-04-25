@@ -9,7 +9,17 @@
 </head>
 <body>
 
-  <orbit-navbar base="../"></orbit-navbar>
+  <nav class="site-nav">
+    <a class="nav-logo" href="../index.html">ORBIT EATS</a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="restaurants.html">Restaurants</a>
+      <a href="review-order.html">Review Order</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="game.html">Game</a>
+    </div>
+    <a href="#" class="nav-auth-btn">Sign Up / Log In</a>
+  </nav>
 
   <main class="checkout-page">
     <header class="checkout-header">
@@ -184,9 +194,32 @@
     </section>
   </main>
 
-  <orbit-footer></orbit-footer>
+  <footer class="site-footer">
+    <span class="footer-brand">ORBIT EATS</span>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
 
-  <script type="module" src="../dist/main.js"></script>
-  <script src="../dist/checkout.js"></script>
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.site-nav').classList.toggle('open');
+    });
+
+    function syncBillingFieldsVisibility() {
+      var checkbox = document.getElementById('billing-same-as-delivery');
+      var billingFields = document.getElementById('billing-fields');
+      if (!checkbox || !billingFields) return;
+      billingFields.hidden = checkbox.checked;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      var checkbox = document.getElementById('billing-same-as-delivery');
+      syncBillingFieldsVisibility();
+      if (checkbox) checkbox.addEventListener('change', syncBillingFieldsVisibility);
+    });
+  </script>
 </body>
 </html>
